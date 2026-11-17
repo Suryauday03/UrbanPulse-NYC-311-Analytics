@@ -1,0 +1,40 @@
+{
+  "project": "Urban Pulse",
+  "audited_at_utc": "2026-11-17T16:33:32.255887+00:00",
+  "database": "urban_pulse_db",
+  "expected_records": 100000,
+  "main_table": {
+    "row_count": 100000,
+    "unique_ids": 100000,
+    "missing_ids": "0",
+    "duplicate_flagged_rows": "0",
+    "earliest_created": "2020-01-01 00:00:00",
+    "latest_created": "2026-11-14 01:49:21",
+    "recorded_closed": "98429",
+    "no_recorded_closure": "1571",
+    "chronology_issues": "215",
+    "invalid_coordinate_rows": "0",
+    "incomplete_coordinate_rows": "1601",
+    "valid_durations": "98214",
+    "over_72_hours": "21638",
+    "closed_date_status_mismatch": "606",
+    "closed_status_without_date": "240"
+  },
+  "staging_table": {
+    "row_count": 100000,
+    "unique_ids": 100000
+  },
+  "checks": {
+    "main_table_matches_expected_records": true,
+    "main_table_ids_are_unique": true,
+    "main_table_has_no_missing_ids": true,
+    "main_table_has_no_duplicate_flags": true,
+    "staging_matches_main_row_count": true
+  },
+  "all_checks_passed": true,
+  "interpretation": [
+    "is_closed is based on a recorded closed_date, not the source status label.",
+    "Chronology issues and coordinate incompleteness are reported, not silently removed.",
+    "A recorded closure does not establish citizen satisfaction or independently verified resolution."
+  ]
+}

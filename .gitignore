@@ -1,0 +1,32 @@
+# Python environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Credentials
+.env
+.env.*
+!.env.example
+
+# Data files
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Temporary files
+*.log
+*.tmp
+.ipynb_checkpoints/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local database backups
+*.sql.gz
+*.bak
